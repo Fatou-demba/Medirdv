@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
-        :root{--blue:#0077B6;--blue2:#023E8A;--green:#2DC653;--dark:#03045E;--light:#F0F4FF;--white:#fff;--gray:#64748B;--lgray:#E2E8F0;--orange:#F77F00;--red:#D62828}
+        :root{--blue:#0077B7;--blue2:#023E8A;--green:#2DC654;--dark:#03045E;--light:#F0F4FF;--white:#fff;--gray:#64748B;--lgray:#E2E8F0;--orange:#F77F00;--red:#D62828}
         body{font-family:'DM Sans',sans-serif;background:var(--light);min-height:100vh;display:flex;flex-direction:column}
 
         nav{background:var(--dark);padding:0 5%;height:64px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
@@ -166,14 +166,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             flex:1;padding:.65rem;background:var(--green);color:#fff;border:none;border-radius:9px;
             font-size:.83rem;font-weight:700;cursor:pointer;text-decoration:none;text-align:center;
             font-family:'DM Sans',sans-serif;transition:.2s;display:block;
-            box-shadow:0 3px 10px rgba(45,198,83,.25);min-width:120px;
+            box-shadow:0 3px 10px rgba(48, 197, 85, 0.25);min-width:120px;
         }
         .btn-reg-patient:hover{background:#25B347;transform:translateY(-1px);color:#fff}
         .btn-reg-medecin{
             flex:1;padding:.65rem;background:var(--orange);color:#fff;border:none;border-radius:9px;
             font-size:.83rem;font-weight:700;cursor:pointer;text-decoration:none;text-align:center;
             font-family:'DM Sans',sans-serif;transition:.2s;display:block;
-            box-shadow:0 3px 10px rgba(247,127,0,.25);min-width:120px;
+            box-shadow:0 3px 10px rgba(248, 132, 7, 0.25);min-width:120px;
         }
         .btn-reg-medecin:hover{background:#D97706;transform:translateY(-1px);color:#fff}
 

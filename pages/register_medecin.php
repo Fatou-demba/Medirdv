@@ -174,7 +174,7 @@ nav{background:var(--dark);padding:0 5%;height:64px;display:flex;align-items:cen
 .reg-header p{color:var(--gray);font-size:.9rem;margin-top:.4rem}
 
 /* Info box */
-.info-box{background:#FFF7ED;border:1px solid #FED7AA;border-radius:10px;padding:.9rem 1rem;margin-bottom:1.5rem;font-size:.83rem;color:#92400E;display:flex;gap:.6rem;align-items:flex-start}
+.info-box{background:#FFF7ED;border:1px solid #f1cda4;border-radius:10px;padding:.9rem 1rem;margin-bottom:1.5rem;font-size:.83rem;color:#92400E;display:flex;gap:.6rem;align-items:flex-start}
 
 /* Alert erreur globale */
 .alert{padding:.75rem 1rem;border-radius:8px;font-size:.83rem;margin-bottom:1.2rem;display:flex;align-items:center;gap:.5rem}
@@ -193,7 +193,7 @@ nav{background:var(--dark);padding:0 5%;height:64px;display:flex;align-items:cen
   font-size:.88rem;font-family:'DM Sans',sans-serif;outline:none;transition:.2s;color:#1E293B;background:#fff;
 }
 .form-group input:focus,.form-group select:focus,.form-group textarea:focus{
-  border-color:var(--orange);box-shadow:0 0 0 3px rgba(247,127,0,.08);
+  border-color:var(--orange);box-shadow:0 0 0 3px rgba(240, 128, 8, 0.08);
 }
 .form-group input.field-error,.form-group select.field-error,.form-group textarea.field-error{
   border-color:var(--red);background:#FFF5F5;
@@ -334,7 +334,7 @@ footer strong{color:#fff}
 
       <div class="form-group">
         <label>Adresse du cabinet <span class="req">*</span></label>
-        <input type="text" name="cabinet" placeholder="Ex : Clinique du Lac, Rue 10, Dakar"
+        <input type="text" name="cabinet" placeholder="Ex : Clinique du Lac, Rue 11, Dakar"
                value="<?=htmlspecialchars($old['cabinet']??'')?>"
                class="<?=isset($erreurs['cabinet'])?'field-error':''?>">
         <?php if(isset($erreurs['cabinet'])): ?><span class="field-msg error">⚠ <?=$erreurs['cabinet']?></span><?php endif; ?>

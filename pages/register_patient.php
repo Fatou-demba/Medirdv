@@ -109,7 +109,7 @@ nav{background:var(--dark);padding:0 5%;height:64px;display:flex;align-items:cen
 .step{display:flex;align-items:center;gap:.5rem;flex:1;min-width:0}
 .step-circle{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;flex-shrink:0;transition:.3s}
 .step.done .step-circle{background:var(--green);color:#fff}
-.step.active .step-circle{background:var(--blue);color:#fff;box-shadow:0 0 0 4px rgba(0,119,182,.15)}
+.step.active .step-circle{background:var(--blue);color:#fff;box-shadow:0 0 0 4px rgba(5, 132, 201, 0.15)}
 .step.inactive .step-circle{background:var(--lgray);color:var(--gray)}
 .step-label{font-size:.76rem;font-weight:600;color:var(--gray);white-space:nowrap}
 .step.active .step-label{color:var(--blue)}
@@ -234,7 +234,7 @@ footer strong{color:#fff}
       <!-- EMAIL -->
       <div class="form-group">
         <label>Adresse email <span class="req">*</span></label>
-        <input type="email" name="email" placeholder="fatou.diallo@exemple.sn"
+        <input type="email" name="email" placeholder="fatoudemba.mbaye@exemple.sn"
                value="<?=htmlspecialchars($old['email']??'')?>"
                class="<?=isset($erreurs['email'])?'field-error':''?>"
                autocomplete="email">
@@ -335,7 +335,7 @@ function checkStrength(v) {
   if (/[A-Z]/.test(v)) score++;
   if (/[0-9]/.test(v)) score++;
   if (/[^A-Za-z0-9]/.test(v)) score++;
-  var colors = ['', '#D62828', '#FBBF24', '#F77F00', '#2DC653'];
+  var colors = ['', '#d32525', '#f1bb30', '#f1820a', '#36d85f'];
   var labels = ['', '🔴 Très faible', '🟡 Faible', '🟠 Moyen', '🟢 Fort'];
   for (var i = 1; i <= 4; i++) {
     var bar = document.getElementById('bar' + i);
