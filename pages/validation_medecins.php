@@ -35,12 +35,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
         $msg = "Votre compte médecin a été validé par l'administrateur. Vous pouvez maintenant vous connecter.";
         $stmt2->execute([':id' => $medecin_id, ':msg' => $msg]);
         
-        $_SESSION['success'] = '✅ Médecin validé avec succès !';
+        $_SESSION['success'] = ' Médecin validé avec succès !';
     } else {
         $_SESSION['error'] = '❌ Erreur lors de la validation.';
     }
     redirect('validation_medecins.php');
 }
+//tester
 
 // Refuser un médecin
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'refuser') {
@@ -55,9 +56,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
             $msg = "Votre compte médecin a été refusé. Motif : " . $motif;
             $stmt2->execute([':id' => $medecin_id, ':msg' => $msg]);
         }
-        $_SESSION['success'] = '✅ Médecin refusé.';
+        $_SESSION['success'] = ' Médecin refusé.';
     } else {
-        $_SESSION['error'] = '❌ Erreur lors du refus.';
+        $_SESSION['error'] = ' Erreur lors du refus.';
     }
     redirect('validation_medecins.php');
 }

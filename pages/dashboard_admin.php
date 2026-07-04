@@ -34,6 +34,7 @@ $stats = [
     'consultations_total' => $pdo->query("SELECT COUNT(*) FROM consultations")->fetchColumn(),
     'consultations_mois' => $pdo->query("SELECT COUNT(*) FROM consultations WHERE date_consultation >= DATE_SUB(CURDATE(), INTERVAL 30 DAY)")->fetchColumn(),
 ];
+//tester
 
 // RDV par mois (12 derniers mois)
 $rdv_par_mois = $pdo->query("

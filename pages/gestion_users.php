@@ -32,6 +32,7 @@ $stats = [
     'supprimes' => $pdo->query("SELECT COUNT(*) FROM patients WHERE statut = 'supprime'")->fetchColumn(),
     'medecins' => $pdo->query("SELECT COUNT(*) FROM medecins WHERE statut = 'valide'")->fetchColumn(),
 ];
+//tester
 
 // ================================================================
 // FILTRES ET PAGINATION
@@ -121,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $stmt = $pdo->prepare("UPDATE medecins SET statut = 'valide' WHERE id = :id");
             }
             $stmt->execute([':id' => $user_id]);
-            $_SESSION['success'] = '✅ Action effectuée avec succès.';
+            $_SESSION['success'] = ' Action effectuée avec succès.';
         }
         redirect('gestion_users.php?role=' . $filtre_role);
     }
