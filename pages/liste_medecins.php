@@ -32,7 +32,7 @@ $specs_count = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $stmt = $pdo->query("SELECT ville, COUNT(*) as nb FROM medecins WHERE statut='valide' GROUP BY ville ORDER BY ville");
 $villes_count = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+//test
 // ================================================================
 // PARAMÈTRES DE FILTRAGE (GET)
 // ================================================================

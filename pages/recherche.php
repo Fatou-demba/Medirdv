@@ -32,7 +32,7 @@ $tri            = $_GET['tri']     ?? 'pertinence';
 $par_page       = 6;
 $page_courante  = max(1, (int)($_GET['page'] ?? 1));
 $offset         = ($page_courante - 1) * $par_page;
-
+//test
 // ================================================================
 // LISTES POUR LES SELECTS / FILTRES (depuis BDD)
 // ================================================================
