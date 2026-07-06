@@ -1,6 +1,6 @@
 <?php
 // ================================================================
-// 404.php — Page d'erreur 404 (Design Figma)
+// 404.php — La Page d'erreur 404 (Design Figma)
 // Université Numérique Cheikh Hamidou Kane — L3 IDA 2024-2025
 // ================================================================
 session_start();
@@ -234,7 +234,7 @@ if ($is_logged_in) {
                     <span class="sugg-icon">🏠</span>
                     <div class="sugg-text">
                         Page d'accueil
-                        <small><?=$is_logged_in ? 'Retourner à votre tableau de bord' : 'Retourner à la page d\'accueil'?></small>
+                        <small><?=$is_logged_in ? 'Retournez à votre tableau de bord' : 'Retournez à la page d\'accueil'?></small>
                     </div>
                     <span class="sugg-arrow">→</span>
                 </a>
