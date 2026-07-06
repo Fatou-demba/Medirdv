@@ -7,7 +7,7 @@ session_start();
 require_once __DIR__ . '/../includes/connexion.php';
 require_once __DIR__ . '/../includes/fonctions.php';
 
-// Récupérer l'URL demandée
+// Recupérer l'URL demandée
 $requested_url = $_SERVER['REQUEST_URI'] ?? '/';
 $error_code = 404;
 
@@ -22,7 +22,7 @@ if ($is_logged_in) {
         $home_label = 'Tableau de bord Admin';
     } elseif ($user_role === 'medecin') {
         $home_link = 'dashboard_medecin.php';
-        $home_label = 'Tableau de bord Médecin';
+        $home_label = 'Tableau de bord Medecin';
     } else {
         $home_link = 'dashboard_patient.php';
         $home_label = 'Tableau de bord Patient';
@@ -327,7 +327,7 @@ if ($is_logged_in) {
         navLinks.classList.toggle('open');
     }
 
-    // Fermer le menu au clic sur un lien (mobile)
+    // Ferme le menu au clic sur un lien (mobile)
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             document.getElementById('navLinks').classList.remove('open');
