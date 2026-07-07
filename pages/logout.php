@@ -32,7 +32,7 @@ if (isset($_SESSION['user_id'])) {
         // Ne pas bloquer la déconnexion si le log échoue
         error_log("Erreur de journalisation de déconnexion : " . $e->getMessage());
     }
-    // TESTER
+    // TESTE
 }
 
 // Vider la session

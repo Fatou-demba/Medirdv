@@ -345,7 +345,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         var input = document.getElementById('password');
         input.type = (input.type === 'password') ? 'text' : 'password';
     }
-    // Tester
+    // Teste
 </script>
 </body>
 </html>

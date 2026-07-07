@@ -487,7 +487,7 @@ function previewUpload(input, boxId, infoId) {
     box.style.borderColor = 'var(--green)';
     box.style.background  = '#F0FDF4';
   }
-  // Tester
+  // Teste
 }
 </script>
 </body>

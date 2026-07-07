@@ -356,7 +356,7 @@ function togglePw(id) {
   var inp = document.getElementById(id);
   inp.type = inp.type === 'password' ? 'text' : 'password';
 }
-// Tester
+// Teste
 </script>
 </body>
 </html>
