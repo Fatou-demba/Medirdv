@@ -7,7 +7,7 @@
 session_start();
 require_once __DIR__ . '/../includes/connexion.php';
 require_once __DIR__ . '/../includes/fonctions.php';
-
+//test
 // Protection : patient connecté uniquement
 if (!isLoggedIn() || getRole() !== 'patient') {
     redirect('login.php?redirect=prendre_rdv.php' . (isset($_GET['medecin']) ? '%3Fmedecin%3D'.$_GET['medecin'] : ''));
