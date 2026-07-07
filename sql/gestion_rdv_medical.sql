@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `admins`;
 CREATE TABLE IF NOT EXISTS `admins` (
+
   `id` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(100) NOT NULL,
   `email` varchar(150) NOT NULL,
@@ -37,6 +38,7 @@ CREATE TABLE IF NOT EXISTS `admins` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 
 --
 -- Déchargement des données de la table `admins`
@@ -53,6 +55,7 @@ INSERT INTO `admins` (`id`, `nom`, `email`, `mot_de_passe`, `date_creation`) VAL
 
 DROP TABLE IF EXISTS `consultations`;
 CREATE TABLE IF NOT EXISTS `consultations` (
+
   `id` int NOT NULL AUTO_INCREMENT,
   `id_rendezvous` int NOT NULL,
   `id_patient` int NOT NULL,
@@ -68,6 +71,7 @@ CREATE TABLE IF NOT EXISTS `consultations` (
   KEY `id_patient` (`id_patient`),
   KEY `id_medecin` (`id_medecin`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 
 -- --------------------------------------------------------
 
@@ -106,6 +110,7 @@ INSERT INTO `disponibilites` (`id`, `id_medecin`, `jour_semaine`, `heure_debut`,
 
 DROP TABLE IF EXISTS `dossiers`;
 CREATE TABLE IF NOT EXISTS `dossiers` (
+
   `id` int NOT NULL AUTO_INCREMENT,
   `id_patient` int NOT NULL,
   `antecedents` text,
@@ -119,6 +124,7 @@ CREATE TABLE IF NOT EXISTS `dossiers` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_patient` (`id_patient`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 
 --
 -- Déchargement des données de la table `dossiers`
@@ -135,6 +141,7 @@ INSERT INTO `dossiers` (`id`, `id_patient`, `antecedents`, `allergies`, `maladie
 
 DROP TABLE IF EXISTS `journal_acces`;
 CREATE TABLE IF NOT EXISTS `journal_acces` (
+
   `id` int NOT NULL AUTO_INCREMENT,
   `id_user` int NOT NULL,
   `type_user` enum('patient','medecin','admin') NOT NULL,
@@ -144,6 +151,7 @@ CREATE TABLE IF NOT EXISTS `journal_acces` (
   `date_action` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 
 --
 -- Déchargement des données de la table `journal_acces`
@@ -165,6 +173,7 @@ INSERT INTO `journal_acces` (`id`, `id_user`, `type_user`, `action`, `id_dossier
 
 DROP TABLE IF EXISTS `medecins`;
 CREATE TABLE IF NOT EXISTS `medecins` (
+
   `id` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(100) NOT NULL,
   `prenom` varchar(100) NOT NULL,
@@ -184,6 +193,7 @@ CREATE TABLE IF NOT EXISTS `medecins` (
   UNIQUE KEY `num_ordre` (`num_ordre`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+
 --
 -- Déchargement des données de la table `medecins`
 --
@@ -200,6 +210,7 @@ INSERT INTO `medecins` (`id`, `nom`, `prenom`, `email`, `mot_de_passe`, `special
 
 DROP TABLE IF EXISTS `notifications`;
 CREATE TABLE IF NOT EXISTS `notifications` (
+
   `id` int NOT NULL AUTO_INCREMENT,
   `id_destinataire` int NOT NULL,
   `type_user` enum('patient','medecin') NOT NULL,
@@ -211,6 +222,7 @@ CREATE TABLE IF NOT EXISTS `notifications` (
   PRIMARY KEY (`id`),
   KEY `id_rdv` (`id_rdv`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 
 --
 -- Déchargement des données de la table `notifications`
