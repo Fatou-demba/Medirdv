@@ -1,17 +1,17 @@
 <?php
 // ================================================================
-// 404.php — La Page d'erreur 404 (Design Figma)
+// 404.php — Page d'erreur 404 (Design Figma)
 // Université Numérique Cheikh Hamidou Kane — L3 IDA 2024-2025
 // ================================================================
 session_start();
 require_once __DIR__ . '/../includes/connexion.php';
 require_once __DIR__ . '/../includes/fonctions.php';
 
-// Recupérer l'URL demandée
+// Récupérer l'URL demandée
 $requested_url = $_SERVER['REQUEST_URI'] ?? '/';
 $error_code = 404;
 
-// Si déjà connecté, adapter les liens
+// Si déjà connecter, adapter les liens
 $is_logged_in = isLoggedIn();
 $user_role = $is_logged_in ? getRole() : '';
 
@@ -22,12 +22,14 @@ if ($is_logged_in) {
         $home_label = 'Tableau de bord Admin';
     } elseif ($user_role === 'medecin') {
         $home_link = 'dashboard_medecin.php';
-        $home_label = 'Tableau de bord Medecin';
+        $home_label = 'Tableau de bord Médecin';
     } else {
         $home_link = 'dashboard_patient.php';
         $home_label = 'Tableau de bord Patient';
     }
-} else {
+
+} else
+ {
     $home_link = 'login.php';
     $home_label = 'Se connecter';
 }
@@ -53,8 +55,8 @@ if ($is_logged_in) {
         .nav-links a{color:#CBD5E1;text-decoration:none;font-size:.88rem;transition:.2s}
         .nav-links a:hover{color:#fff}
         .nav-btns{display:flex;gap:.7rem;flex-wrap:wrap}
-        .btn-o{padding:.45rem 1.1rem;border:1.5px solid #CBD5E1;color:#CBD5E1;border-radius:8px;font-size:.82rem;cursor:pointer;background:transparent;transition:.2s;font-family:'DM Sans',sans-serif;text-decoration:none;display:inline-flex;align-items:center;gap:.4rem}
-        .btn-o:hover{background:rgba(255,255,255,.1);color:#fff}
+        .btn-o{padding:.45rem 1.1rem;border:1.5px solid #c1d0e2;color:#CBD5E1;border-radius:8px;font-size:.82rem;cursor:pointer;background:transparent;transition:.2s;font-family:'DM Sans',sans-serif;text-decoration:none;display:inline-flex;align-items:center;gap:.4rem}
+        .btn-o:hover{background:rgba(94, 66, 66, 0.1);color:#fff}
         .btn-p{padding:.45rem 1.2rem;background:var(--green);color:#fff;border:none;border-radius:8px;font-size:.82rem;font-weight:600;cursor:pointer;transition:.2s;font-family:'DM Sans',sans-serif;text-decoration:none;display:inline-flex;align-items:center;gap:.4rem}
         .btn-p:hover{background:#25B347;transform:translateY(-1px)}
         .hamburger{display:none;background:none;border:none;font-size:1.2rem;color:#fff;cursor:pointer;padding:.3rem}
@@ -234,7 +236,7 @@ if ($is_logged_in) {
                     <span class="sugg-icon">🏠</span>
                     <div class="sugg-text">
                         Page d'accueil
-                        <small><?=$is_logged_in ? 'Retournez à votre tableau de bord' : 'Retournez à la page d\'accueil'?></small>
+                        <small><?=$is_logged_in ? 'Retourner à votre tableau de bord' : 'Retourner à la page d\'accueil'?></small>
                     </div>
                     <span class="sugg-arrow">→</span>
                 </a>
@@ -260,7 +262,7 @@ if ($is_logged_in) {
                             <span class="sugg-icon">📋</span>
                             <div class="sugg-text">
                                 Mon dossier médical
-                                <small>Accéder à vos informations médicales</small>
+                                <small>Acceder à vos informations médicales</small>
                             </div>
                             <span class="sugg-arrow">→</span>
                         </a>
@@ -269,7 +271,7 @@ if ($is_logged_in) {
                             <span class="sugg-icon">📅</span>
                             <div class="sugg-text">
                                 Mon agenda
-                                <small>Gérer vos rendez-vous</small>
+                                <small>Gerer vos rendez-vous</small>
                             </div>
                             <span class="sugg-arrow">→</span>
                         </a>
@@ -327,7 +329,7 @@ if ($is_logged_in) {
         navLinks.classList.toggle('open');
     }
 
-    // Ferme le menu au clic sur un lien (mobile)
+    // Fermer le menu au clic sur un lien (mobile)
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             document.getElementById('navLinks').classList.remove('open');
