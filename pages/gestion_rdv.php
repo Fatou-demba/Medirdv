@@ -272,6 +272,11 @@ $jour_actuel = $jours_fr[date('l')];
         <a href="securite.php" class="nav-item">
             <span class="icon">🔒</span>Journal Accès
         </a>
+        <a href="rapport.php" class="nav-item">
+             <span class="icon">🖨️</span>Rapport
+        </a>
+         <div class="nav-section">Compte</div>
+        
         <a href="securite.php" class="nav-item">
             <span class="icon">⚙️</span>Paramètres
         </a>
@@ -487,7 +492,7 @@ $jour_actuel = $jours_fr[date('l')];
     </div>
 
     <footer>
-        <p><strong>MediRDV</strong> — UNCHK | L3 IDA 2024-2025 &nbsp;|&nbsp; Page designer par : <strong>Aicha Djigo (E7)</strong> — gestion_rdv.php</p>
+        <p><strong>MediRDV</strong> — UNCHK | L3 IDA 2024-2025 &nbsp;|&nbsp; Page designer par : <strong>Dieynaba Diallo (E8)</strong> — gestion_rdv.php</p>
     </footer>
 </div>
 

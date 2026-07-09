@@ -316,6 +316,10 @@ unset($_SESSION['error']);
         <a href="securite.php" class="nav-item active">
             <span class="icon">🔒</span>Journal Accès
         </a>
+        <a href="rapport.php" class="nav-item">
+             <span class="icon">🖨️</span>Rapport
+     </a>
+         <div class="nav-section">Compte</div>
         <a href="logout.php" class="nav-item">
             <span class="icon">🚪</span>Déconnexion
         </a>
@@ -557,7 +561,7 @@ unset($_SESSION['error']);
     </div>
 
     <footer>
-        <p><strong>MediRDV</strong> — UNCHK | L3 IDA 2024-2025 &nbsp;|&nbsp; Page designer par : <strong>Aicha Djigo (E7)</strong> — securite.php</p>
+        <p><strong>MediRDV</strong> — UNCHK | L3 IDA 2024-2025 &nbsp;|&nbsp; Page designer par : <strong>Diynaba Diallo (E8)</strong> — securite.php</p>
     </footer>
 </div>
 
